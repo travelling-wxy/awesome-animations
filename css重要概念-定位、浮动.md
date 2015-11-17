@@ -16,31 +16,31 @@
 	相对于其在文档流中的开始位置。
 
 **原理：**    
-	```
-	<!-- html -->
-	<div>
-		<span>1111111</span>
-		<span>2222222</span>
-	</div>
-	 <div id="test">
-		<span>1111111</span>
-		<span>2222222</span>
-	</div>
-	 <div>
-		<span>1111111</span>
-		<span>2222222</span>
-	</div>
-	<!-- style -->
-	div {
-		border: 1px solid #000;
-		margin: 10px;
-	}
-	#test {
-		position: relative;
-		top: -10px;
-		left: -10px;
-	}
-	```
+```
+<!-- html -->
+<div>
+	<span>1111111</span>
+	<span>2222222</span>
+</div>
+ <div id="test">
+	<span>1111111</span>
+	<span>2222222</span>
+</div>
+ <div>
+	<span>1111111</span>
+	<span>2222222</span>
+</div>
+<!-- style -->
+div {
+	border: 1px solid #000;
+	margin: 10px;
+}
+#test {
+	position: relative;
+	top: -10px;
+	left: -10px;
+}
+```
 	这里啦，每个 div 相对于上一个 div 定位。
 
 没有 #test 下效果：    
@@ -62,41 +62,41 @@
 
 **原理：**    
 	这里是页脚自适应文档最底部的栗子~~
-	```
-	<!-- html -->
-	<body>
-		<div id="header"></div>
-		<div id="wrapper"></div>
-		<div id="footer"></div>
-	</body>
-	<!-- style -->
-	html {
-		min-height: 100%;
-		position: relative;
-	}
-	body {
-		min-height: 100%;
-		padding-bottom: 180px;
-		margin: 0;
-		padding: 0;
-	}
-	#header {
-		width: 100%;
-		height: 56px;
-		background-color: #444;
-	}
-	#wrapper {
-		width: 100%;
-		min-height: 700px;
-	}
-	#footer {
-		width: 100%;
-		height: 180px;
-		position: absolute;
-		bottom: 0;
-		background-color: #444;
-	}
-	```
+```
+<!-- html -->
+<body>
+	<div id="header"></div>
+	<div id="wrapper"></div>
+	<div id="footer"></div>
+</body>
+<!-- style -->
+html {
+	min-height: 100%;
+	position: relative;
+}
+body {
+	min-height: 100%;
+	padding-bottom: 180px;
+	margin: 0;
+	padding: 0;
+}
+#header {
+	width: 100%;
+	height: 56px;
+	background-color: #444;
+}
+#wrapper {
+	width: 100%;
+	min-height: 700px;
+}
+#footer {
+	width: 100%;
+	height: 180px;
+	position: absolute;
+	bottom: 0;
+	background-color: #444;
+}
+```
 	这里啦，页脚 #footer 的绝对定位相对于 html 元素，始终在文档底部。
 
 - 固定定位
