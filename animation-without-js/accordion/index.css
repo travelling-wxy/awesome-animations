@@ -1,0 +1,120 @@
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:14px;
+}
+.accordion {
+  /* margin:0 auto; */
+  border:1px solid #542437;
+  border-radius:10px;
+  width:400px;
+  padding:10px;
+  background:#fff;
+  display: inline-block;
+}
+.accordion ul {
+    list-style:none;
+    margin:0;
+    padding:0;  
+}
+/* 隐藏 radio & checkbox */
+.accordion [type=radio], .accordion [type=checkbox] {
+    display:none;
+}
+/* title */
+.accordion label {
+  display:block;
+  font-size:16px;
+  line-height:16px;
+  background:#D95B43;
+  border:1px solid #542437;
+  color:#542437;
+  text-shadow:1px 1px 1px rgba(255,255,255,0.3);
+  font-weight:700;
+  cursor:pointer;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  text-transform:uppercase;
+}
+/* hover & 选中某个li, title的变化 */
+.accordion ul li label:hover, .accordion [type=radio]:checked ~ label, .accordion [type=checkbox]:checked ~ label {
+    background:#C02942;
+    color:#FFF;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.5)
+}
+/* content */
+.accordion .content {
+    padding:0 10px;
+    overflow:hidden;
+    border:1px solid #fff; /* Make the border match the background so it fades in nicely */
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+}
+
+/* 
+ * Vertical 垂直类型
+ */
+.vertical ul li {
+    overflow:hidden;
+    margin:0 0 1px;
+}
+.vertical ul li label {
+    padding:10px;
+}
+.vertical [type=radio]:checked ~ label, .vertical [type=checkbox]:checked ~ label {
+    border-bottom:0;
+}
+.vertical ul li label:hover {
+    border:1px solid #542437; /* We don't want the border to disappear on hover */
+}
+/* 默认内容隐藏 height -> 0 */
+.vertical ul li .content {
+    height:0px;
+    border-top:0;
+}
+.vertical [type=radio]:checked ~ label ~ .content, .vertical [type=checkbox]:checked ~ label ~ .content {
+    height:150px;
+    border:1px solid #542437;
+}
+
+/* 
+ * Horizontal 水平类型
+ * 很遗憾，这里要固定高度，希望有更好的建议 
+ */
+.horizontal {
+    overflow:hidden;
+    height:300px;
+}
+.horizontal ul li {
+    float:left;
+    margin:0 1px 0 0;
+}
+.horizontal ul li label {
+    word-wrap:break-word;
+    letter-spacing:10px;
+    text-align:center;
+    height:280px;
+    padding:10px 0 10px 5px;
+    width:25px;
+    float:left;
+}
+.horizontal ul li .content {
+    height:300px;
+    padding:0;
+    display:inline-block; /* Makes its work in FF */
+    visibility:hidden; /* Chrome bug cant show width < 1px for some reason so need to toggle visibility */
+    width:1px;
+    border-left:0;
+}
+.horizontal [type=radio]:checked ~ label {
+    border-right:0;    
+}
+.horizontal ul li label:hover {
+    border:1px solid #542437; /* Again, we don't want the border to disappear on hover */
+}
+.horizontal [type=radio]:checked ~ label ~ .content {    
+    visibility:visible;
+    width:242px;
+    padding:0 10px;
+    border:1px solid #542437;
+    border-left:0;    
+}

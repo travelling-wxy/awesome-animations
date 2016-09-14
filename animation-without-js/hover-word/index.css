@@ -1,0 +1,32 @@
+
+html {
+  font-size: 10px;
+}
+
+.post {
+  max-width: 30rem;
+  margin: 2rem;
+  float: left;
+}
+  
+
+a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: #fefefe;
+  text-shadow: 1px 1px 0 alpha(white,0.4);
+}
+  
+/* go go go */
+.fun-hover {
+  background-image: linear-gradient(to right, #00caab 50%, #FFCDD2 50%);
+  background-position: 0;
+  /* twice big */
+  background-size: 200%;
+  transition: all 0.4s;
+}
+
+.fun-hover:hover {
+  background-position: -100%;
+}
+  

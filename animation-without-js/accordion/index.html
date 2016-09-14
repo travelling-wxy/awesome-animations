@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>accordion</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<!-- 利用 input[type="radio||checkbox"], 实现了三种效果, 下面是 手风琴html基本结构 -->
+
+	<!-- 垂直手风琴 一次只展开一项 -->
+	<div class="accordion vertical" id="vertical-radio">
+	  <ul>
+	    <li>
+	      <input type="radio" name="radio-accordion" id="radio-1" />
+	      <label for="radio-1">Title 1</label>
+	      <div class="content">
+	        I'm content 11111.
+	      </div>
+	    </li>
+	    <li>
+	      <input type="radio" name="radio-accordion" id="radio-2" />
+	      <label for="radio-2">Title 2</label>
+	      <div class="content">
+	        I'm content 22222.
+	      </div>
+	    </li>
+	  </ul>
+	</div>
+
+	<!-- 垂直手风琴 可展开多项 -->
+	<div class="accordion vertical" id="vertical-checkbox">
+	  <ul>
+	    <li>
+	      <input type="checkbox" name="checkbox-accordion" id="checkbox-1" />
+	      <label for="checkbox-1">Title 1</label>
+	      <div class="content">
+	        I'm content 11111.
+	      </div>
+	    </li>
+	    <li>
+	      <input type="checkbox" name="checkbox-accordion" id="checkbox-2" />
+	      <label for="checkbox-2">Title 2</label>
+	      <div class="content">
+	        I'm content 22222.
+	      </div>
+	    </li>
+	  </ul>
+	</div>
+
+	<!-- 水平手风琴 展开一项 -->
+	<div class="accordion horizontal" id="horizontal-radio">
+	  <ul>
+	    <li>
+	      <input type="radio" name="radio-accordion" id="hori-radio-1" />
+	      <label for="hori-radio-1">Title 1</label>
+	      <div class="content">
+	        I'm content 11111.
+	      </div>
+	    </li>
+	    <li>
+	      <input type="radio" name="radio-accordion" id="hori-radio-2" />
+	      <label for="hori-radio-2">Title 2</label>
+	      <div class="content">
+	        I'm content 22222.
+	      </div>
+	    </li>
+	  </ul>
+	</div>
+
+</body>
+</html>
