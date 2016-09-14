@@ -1,4 +1,6 @@
 # awesome-animations
+---
+
 I love various elegant, fun and awesome animation. 💗
 
 | Directories | Purpose |
