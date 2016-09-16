@@ -1,0 +1,60 @@
+/*
+$orig-width: 600px
+$orig-height: 383px
+
+$width: $orig-width * 1.25
+$height: $orig-height * 1.25
+*/
+/*
+ * two pictures: before & after;
+ * The key is: translateZ;
+ */
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  position: absolute;
+  perspective: 400px;
+  width: 750px;
+  height: 478.75px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: perspective 5s;
+}
+
+.fore-box {
+  z-index: 10;
+}
+.bg-box {
+  z-index: 5;
+}  
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 478.75px;
+  transition: all 5s;
+}
+
+.fore {
+  z-index: 10;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/hills-foreground.png);
+  background-size: cover;
+}
+.bg {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/hills-bg.jpg);
+  transform: translateZ(150px);
+  background-size: cover;
+}
+  
+.container:hover .fore {
+    transform: translateZ(200px);
+}
+.container:hover .bg {
+    transform: translateZ(0);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
