@@ -1,3 +1,7 @@
+body {
+  background-color: #34495e;
+}
+
 .animation-container {
   display: inline-block;
   margin: 0px 40px;
@@ -140,4 +144,58 @@
 @keyframes animation4 {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/*
+ * Animation 5
+ */
+.animation5 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.animation5:before {
+  content: '';
+  position: absolute;
+  top: 67px;
+  left: 0;
+  width: 50px;
+  height: 6px;
+  background: black;
+  opacity: .2;
+  border-radius: 50%;
+  animation: shadow .5s linear infinite;
+}
+.animation5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #00caab;
+  animation: rotate .5s linear infinite;
+  border-radius: 5px;
+}
+@keyframes rotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(10px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(20px) scale(1.1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 50px;
+  }
+  75% {
+    ransform: translateY(10px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes shadow {
+  0%, 100% {transform: scaleX(1);}
+  50% {transform: scaleX(1.2);}
 }
